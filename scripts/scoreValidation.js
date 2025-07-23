@@ -13,6 +13,8 @@ export function whoWon(dealerScore, playerScore) {
     return 'player-win';
   } else if (playerScore === dealerScore) {
     return 'draw';
+  } else if (playerScore > 21 && dealerScore > 21) {
+    return 'draw';
   } else {
     return 'error';
   }

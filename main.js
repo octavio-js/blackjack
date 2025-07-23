@@ -109,7 +109,7 @@ function gameEnding(dealerScore, playerScore) {
     messageDiv.textContent = 'Draw!';
     messageDiv.classList.add('message-draw');
   } else {
-    messageDiv.textContent('Unexpected game ending!');
+    messageDiv.textContent = 'Unexpected game ending!';
     messageDiv.classList.add('message-error');
   }
 }
