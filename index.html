@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" type="module"></script>
+    <title>BlackJack</title>
+  </head>
+  <body>
+    <div id="rules-div">
+      <button id="rules-btn" aria-label="Show rules">☰</button>
+      <div id="toggled-rules">
+        <button id="close-rules-btn" aria-label="Close rules">&times;</button>
+        <div id="rules-content">
+          <h3>Rules</h3>
+          <h4 class="rule-header">Dealer wins when it:</h4>
+          <p class="rule">&gt; has 21 or less, and you have more than 21</p>
+          <p class="rule">&gt; has a higher score than you, and both of you have less than 21</p>
+          <h4 class="rule-header">You win when you:</h4>
+          <p class="rule">&gt; have 21 or less, and the dealer has more than 21</p>
+          <p class="rule">&gt; have a higher score than the dealer, and both of you have less than 21</p>
+          <h4 class="rule-header">It's a draw when:</h4>
+          <p class="rule">&gt; both of you have the same points</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="table">
+      <div id="message"></div>
+      <!-- Dealer Area -->
+      <div class="participant-area" id="dealer-area">
+        <div class="circle" id="dealer-marker">
+          <span>Dealer</span>
+        </div>
+        <div class="cards" id="dealer-cards"></div>
+        <div class="score" id="dealer-score"></div>
+      </div>
+  
+      <!-- Player Area -->
+      <div class="participant-area" id="player-area">
+        <div class="cards" id="player-cards"></div>
+        <div class="score" id="player-score"></div>
+        <div class="circle" id="player-marker">
+          <span>You</span>
+        </div>
+        <div id="actions">
+          <button class="player-actions" id="deal-btn">Deal</button>
+          <button class="player-actions" id="hit-btn">Hit</button>
+          <button class="player-actions" id="stand-btn">Stand</button>
+          <button class="player-actions" id="reset-btn">Reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
